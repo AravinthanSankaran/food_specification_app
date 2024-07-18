@@ -1,10 +1,12 @@
-import Link from "next/link";
+// import Link from "next/link";
+import Hero from "../app/Hero";
+import Categories from "../components/categories";
 
 export default function Home() {
   return (
-  <div>
-    <h1>welcom to food recipe app</h1>
-    <Link href="/recipe-list">some recipes</Link>
-  </div>
+    <div>
+      <Hero />
+      <Categories />
+    </div>
   );
 }

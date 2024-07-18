@@ -1,36 +1,43 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "../ui/card";
+import { Card, CardContent } from "../ui/card";
 import Link from "next/link";
+import Image from "next/image";
 
 function RecipeList({ recipeList }) {
-  console.log(recipeList);
+  // console.log(recipeList);
   return (
     <div>
-      <div className="p-4 mx-auto lg:max-w-6xl md:max-w-4xl sm:max-w-full">
-        <Link href={"/"}>
+      <div className="p-4 mx-auto lg:max-w-[1300px] md:max-w-4xl sm:max-w-full">
+        {/* <Link href={"/"}>
           <button className="rounded-full bg-slate-500 p-2 mb-3">
             Go Back to Home
           </button>
-        </Link>
-        <h2 className="text-4xl font-bold text-gray-800 mb-12">Recipes</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        </Link> */}
+        {/* <div>
+          <h2 className=" text-4xl font-bold border-b-2 border-orange-300 pb-1 text-gray-800 mb-12 w-max mx-auto">
+            Recipes
+          </h2>
+        </div> */}
+        <div className="bg-orange-400">
+          <div className="py-20">
+            <h2 className="text-center font-bold text-[20px] md:text-[40px]">
+              RECIPE
+            </h2>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           {recipeList && recipeList.length > 0
             ? recipeList.map((recipe) => (
                 <Link href={`/recipe-list/${recipe.id}`}>
                   <Card>
                     <CardContent className="bg-white rounded-md overflow-hidden shadow-md cursor-pointer hover:scale-[1.1] transition-all">
                       <div className="w-full aspect-w-16 aepect-h-8 lg:h-80">
-                        <img
+                        <Image
                           src={recipe.image}
                           alt={recipe.name}
-                          className="h-full w-full object-cover object-top"
+                          width={200}
+                          height={200}
+                          className="h-full w-full object-cover object-top mt-5"
                         />
                       </div>
                       <div className="p-6">
