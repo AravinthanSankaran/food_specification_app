@@ -9,7 +9,7 @@ function Navbar() {
         <Link href={"/"} className="flex items-center gap-2">
           <IoFastFood className="w-9 h-9 text-orange-400" />
           <h2 className="text-black text-xl md:text-3xl font-bold">
-            FoodRecipe
+            DishDiscovery
           </h2>
         </Link>
         <nav className="space-x-2 md:space-x-11 py-3 md:py-0 items-center">
